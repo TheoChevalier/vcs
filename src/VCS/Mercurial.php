@@ -17,7 +17,7 @@ class Mercurial extends Base
     }
 
     /**
-     * Get the list of file changed with the type of change for a given revision.
+     * Get the list of files changed with the type of change for a given revision.
      * Results are returned as a structured array.
      *
      * @param String $rev A valid changeset for this repo
