@@ -47,4 +47,15 @@ class Mercurial extends Base
         $this->execute('hg pull -r default');
         $this->execute('hg update -C');
     }
+
+    /**
+     * Revert a file to a particular revision.
+     *
+     * @param String $rev A valid changeset for this repo
+     * @param String $path The path of a file
+     * @return void
+     */
+    public function revertFile($rev, $path) {
+        $this->execute("hg revert -r {$rev} {$path}");
+    }
 }
