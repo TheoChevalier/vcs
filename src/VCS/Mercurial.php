@@ -71,7 +71,7 @@ class Mercurial extends Base
 
     /**
      * Get the latest changeset hash of the repo
-     * @return String hash of the current changeset
+     * @return String Hash of the current changeset
      */
     public function getLatestChangeset() {
         return $this->execute("hg id -i");
