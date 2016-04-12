@@ -49,7 +49,7 @@ class Mercurial extends Base
     }
 
     /**
-     * Revert a file to a particular revision.
+     * Revert a file to a specific revision.
      *
      * @param String $rev A valid changeset for this repo
      * @param String $path The path of a file
@@ -60,7 +60,7 @@ class Mercurial extends Base
     }
 
     /**
-     * Revert a repo to a particular revision.
+     * Revert a repo to a specific revision.
      *
      * @param String $rev A valid changeset for this repo
      * @return void
