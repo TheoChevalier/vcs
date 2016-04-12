@@ -58,4 +58,21 @@ class Mercurial extends Base
     public function revertFile($rev, $path) {
         $this->execute("hg revert -r {$rev} {$path}");
     }
+
+    /**
+     * Revert a repo to a particular revision.
+     *
+     * @param String $rev A valid changeset for this repo
+     * @return void
+     */
+    public function revertRepo($rev) {
+        $this->execute("hg update -r {$rev}");
+    }
+
+    /**
+     * Get the latest changeset hash of the repo
+     */
+    public function getLatestChangeset() {
+        return $this->execute("hg id -i");
+    }
 }
